@@ -9,9 +9,12 @@
           "48": "images/icon-48.png",
           "128": "images/icon-128.png"
         },
+    "action":{
+        "default_popup": "scripts/index.html"
+    },
     "content_scripts": [
             {
-              "js": ["scripts/contents.js"],
+              "js": ["./scripts/contents.js"],
               "matches": [
                 "https://economictimes.indiatimes.com/*"
               ]
