@@ -32,8 +32,17 @@ if (title2 || title) {
       console.log(generatedContent);
       console.log(generatedTitle);
 
-      var generatedContentDiv = document.getElementById("generatedContentDiv");
-      generatedContentDiv.innerHTML = "generatedContent";    
+      const generatedContentDiv = document.getElementById(
+        "generatedContentDiv"
+      );
+      if (generatedContentDiv) {
+        generatedContentDiv.innerHTML = generatedContent;
+      }
+
+      if (summary) {
+        summary.innerHTML = generatedContent;
+      }
+
       if (title) {
         title.innerHTML = generatedTitle;
       } else if (title2) {
