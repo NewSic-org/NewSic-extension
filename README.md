@@ -6,6 +6,8 @@
 
 **NewSic** is a browser extension that transforms any news article into a Bollywood/Indian song. The title of the article is replaced with the name of a fictional Bollywood movie based on the content of the article.
 
+https://github.com/gSayak/NewSic/assets/88048601/e0ce5ea1-269c-41a0-a9e7-38b9a6004431
+
 ## Features
 
 - Convert news articles into Bollywood songs.
