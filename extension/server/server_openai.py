@@ -68,12 +68,15 @@ def get_data():
     articles_list = list(articles)
     return jsonify(articles_list)
 
-@app.route('/api/data/headlines')
+@app.route('/api/data/headlines' ,methods=['GET'])
 def headlines():
     headlines = db.articles.find({}, {"art_title": 1, "_id": 0})
     headlines_list = [article["art_title"] for article in headlines]
     return jsonify({"headlines": headlines_list})
 
+@app.route("/", methods=['GET'])
+def home():
+    return "Connection Succesful"
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run()
