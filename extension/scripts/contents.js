@@ -14,13 +14,16 @@ if (title && summary) {
 if (title2 || title) {
   (async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/process-title", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestBody),
-      });
+      const response = await fetch(
+        "https://newsic-server.vercel.app/process-title",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
